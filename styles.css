@@ -1,0 +1,114 @@
+:root {
+  --dark: #383737;
+  --yellow: rgb(204, 204, 18);
+  --green: rgb(5, 156, 5);
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* box-sizing: border-box; */
+}
+
+header {
+  color: white;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: .4em 0 1em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  width: 12em;
+}
+
+.game-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  /* flex-grow: 1; */
+  grid-template-columns: repeat(5, 4em);
+  grid-template-rows: repeat(6, 4em);
+  gap: .25em;
+  margin-bottom: 4em;
+}
+
+.tile {
+  font-size: 2em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .08em solid rgb(66, 65, 65);
+  font-weight: bold;
+}
+
+.tile.wrong {
+  background-color: var(--dark);
+  border: none;
+}
+
+.tile.incorrectPos {
+  background-color: var(--yellow);
+  border: none;
+}
+
+.tile.correct {
+  background-color: var(--green);
+  border: none;
+}
+
+.keyboard-grid {
+  display: grid;
+  grid-template-columns: repeat(20, 1.25em);
+  gap: .3em;
+  justify-content: center;
+  font-size: 1em;
+}
+
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 2;
+  border: none;
+  border-radius: 10%;
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+  height: 4em;
+}
+
+.key:hover {
+  background-color: #6d6b6b;
+}
+
+.key.span2 {
+  grid-column: span 3;
+}
+
+.key.wrong {
+  background-color: var(--dark);
+}
+
+/* .key.wrong:hover {
+  background-color: #525050;
+} */
+
+.key.incorrectPos {
+  background-color: var(--yellow);
+}
+
+/* .key.incorrectPos:hover {
+  background-color: rgb(180, 180, 65);
+} */
+
+.key.correct {
+  background-color: var(--green);
+}
